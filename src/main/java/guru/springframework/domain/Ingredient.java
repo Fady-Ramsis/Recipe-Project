@@ -3,6 +3,7 @@ package guru.springframework.domain;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.math.BigDecimal;
 
 public class Ingredient {
@@ -13,6 +14,7 @@ public class Ingredient {
     private String description;
     private BigDecimal amount;
 
+    @ManyToOne
     private Recipe recipe;
 
     public Long getId() {
